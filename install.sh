@@ -26,7 +26,8 @@ sudo apt-get install -y docker-engine
 
 # RabbitMQ
 docker pull rabbitmq
-docker run -d --hostname my-rabbit --name quote-rabbit -p 5672:5672 -e RABBITMQ_DEFAULT_USER=rabbitusr -e RABBITMQ_DEFAULT_PASS=rabbitpass rabbitmq
+docker run -it --hostname my-rabbit-management --name rabbit-management -e RABBITMQ_DEFAULT_USER=rabbitusr -e RABBITMQ_DEFAULT_PASS=rabbitpass -p 8181:15672 rabbitmq:3-management
+
 
 # PostGres
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | \
@@ -35,3 +36,5 @@ sudo apt-get update
 apt-get install postgresql-9.6
 sudo -i -u postgres
 sudo -u postgres createdb carinsurance
+sudo -u postgres psql
+ALTER USER postgres PASSWORD 'root';
