@@ -19,8 +19,8 @@ public class CustomerController {
 	private CustomerRepository customerRepository;
 
 	
-	/**
-     * US03
+	/** 
+     * US03 - 2
      */	
 	@RequestMapping("/modifier")
 	@ResponseBody
