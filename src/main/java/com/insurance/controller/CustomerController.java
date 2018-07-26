@@ -25,7 +25,7 @@ public class CustomerController {
 	@RequestMapping("/modifier")
 	@ResponseBody
 	Float calculateModifier(@RequestBody Customer customer) {
-		/* #TODO Implement*/
+		/* #TODO Implement isso*/
 		return new Float(0);
 	}
 	
