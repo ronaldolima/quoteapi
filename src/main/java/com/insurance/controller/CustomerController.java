@@ -20,7 +20,7 @@ public class CustomerController {
 
 	
 	/** 
-     * US03 - 2
+     * UC001 - 2
      */	
 	@RequestMapping("/modifier")
 	@ResponseBody
